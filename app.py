@@ -27,16 +27,16 @@ def main():
         porcentaje = (respuestas_correctas / len(preguntas)) * 100
         if porcentaje == 100:
             emoji = "🤯"
-            st.write("Genio absoluto")
+            st.info("Genio absoluto")
         elif porcentaje >= 80:
             emoji = "🤓"
-            st.write("Súper nerd")
+            st.info("Súper nerd")
         elif porcentaje >= 50:
             emoji = "😃"
-            st.write("Algo nerd")
+            st.info("Algo nerd")
         else:
             emoji = "🤡"
-            st.write("Casi nada nerd")
+            st.info("Casi nada nerd")
         
         st.subheader(f"Obtuviste {respuestas_correctas} de {len(preguntas)} respuestas correctas.")
         st.subheader(f"Tu porcentaje de nerd es: {porcentaje:.2f}% {emoji}")
